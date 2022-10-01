@@ -1,0 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { BrowserRouter } from 'react-router-dom';
+
+import './index.css';
+import App from './App';
+import configureProductStore from './hooks-store/products-store';
+
+//mozemo uvezti vise funkicja za konfiguraciju stora (ali drugacije da ih nazovemo, zato je dobro da su izvezeni sa dfult), i da konfigurisemo razlicite storove (slajsove)
+configureProductStore();
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+);
